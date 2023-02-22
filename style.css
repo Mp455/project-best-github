@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--ff-primary);
+}
+
+:root{
+    font-size: 62.5%;
+    --ff-primary: 'Poppins', sans-serif;
+    --text-color: #303030;
+    --button-color-cancel: rgb(223, 29, 29);
+    --button-color-confirm: rgb(31, 182, 31);
+    --color-alert: #dddddd;
+
+    --hue: 194;
+    --primary-color: hsl(var(--hue), 100%, 63% )
+}
+
+body{
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background-color: rgb(254, 252, 255);
+}
+
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+
+
+#app{
+    padding: 2rem;
+    max-width: 500px;
+    margin: 0 auto;
+
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2.5rem 0;
+}
+
+header h1{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    border-radius: 25%;
+}
+
+.search input{
+    height: 3.2rem;
+    border: 1px solid #ccc;
+    border-radius: .4rem 0 0 .4rem;
+    padding: 0 .8rem;
+}
+
+.search button{
+    background-color: var(--primary-color);
+    border-radius: 0 .4rem .4rem 0;
+    height: 3.2rem;
+    border: none;
+    padding:  0 1rem;
+    cursor: pointer;
+}
+
+.search button:hover{
+    filter: brightness(1.1);
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 .4rem .2rem rgba(0, 0, 0, 0.3);
+}
+
+table *{
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+table th{
+    background: var(--primary-color);
+    text-align: left;
+    font-weight: normal;
+    padding: 1.5rem;
+}
+
+table th:first-child{
+    border-top-left-radius: .4rem;
+
+}
+
+table th:last-child{
+    border-top-right-radius: .4rem;
+
+}
+
+table tr:nth-child(odd){
+    background: #ddd;
+}
+
+table tr{
+    background: #eee;
+}
+
+table td{
+    padding: 1.5rem;
+}
+
+td.user{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+td.user img{
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+td.user a{
+    text-decoration: none;
+}
+
+td.user a p{
+    font-weight: bold;
+}
+
+button.remove{
+    background: none;
+    border: none;
+    color: var(--button-color-cancel);
+    cursor: pointer;
+}
+
+.alert{
+    background-color: var(--color-alert);
+    padding: 2rem;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(0.7rem);
+    transition: transform 1.2s;
+}
+
+.open{
+    visibility: visible;
+    opacity: 1;
+}
+
+.btnAlert{
+    background: var(--color-alert);
+    padding: .5rem;
+    border: none;
+    font-size: 2.4rem;
+    cursor: pointer;
+}
+
+#buttonCancel{
+    color: var(--button-color-cancel);
+}
+
+#buttonConfirm{
+    color: var(--button-color-confirm);
+}

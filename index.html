@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+        <div class="alert">
+            <div class="alertMessage">Tem certeza que deseja exlcuir este usuário?</div>
+            <button id="buttonCancel" class="btnAlert">&times;</button>
+            <button id="buttonConfirm" class="btnAlert">&#x02713;</button>
+        </div>      
+
+    <div id="app">
+        <header>
+            <h1> GitHub Favorites</h1>
+            <div class="search">
+                <label class="sr-only" for="input-search">Usuário do GitHub</label>
+                <input id="input-search" type="text" placeholder="Usuário do GitHub...">
+                <button>&plus;</button>
+
+            </div>
+        </header>
+        <table>
+            <thead>
+                <tr>
+                    <th>Usuário</th>
+                    <th>Repositórios</th>
+                    <th>Seguidores</th>
+                    <th></th>
+
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>
